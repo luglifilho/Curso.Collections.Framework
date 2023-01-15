@@ -6,7 +6,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-
         System.out.println("Crie uma lista e adicione as notas:");
 
         List notas = new ArrayList();
@@ -27,7 +26,7 @@ public class Main {
 
         System.out.println(notas);
 
-       // notas.set(notas.indexOf(5d), 6.0);
+        // notas.set(notas.indexOf(5d), 6.0);
 
         System.out.println(notas.contains(5d));
 
@@ -36,7 +35,7 @@ public class Main {
 
         Iterator iterator = notas.iterator();
         Double soma = 0.0;
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             Double next = (Double) iterator.next();
             soma += next;
         }
@@ -49,9 +48,10 @@ public class Main {
 
         Iterator iterator1 = notas.iterator();
 
-        while(iterator1.hasNext()) {
+        while (iterator1.hasNext()) {
             Double next = (Double) iterator1.next();
-            if(next < 7) iterator1.remove();
+            if (next < 7)
+                iterator1.remove();
         }
 
         System.out.println(notas);
@@ -60,11 +60,29 @@ public class Main {
 
         System.out.println(notas.isEmpty());
 
+    }
+}
 
+class Gato {
+    private String nome;
+    private Integer idade;
+    private String cor;
 
+    public Gato(String nome, Integer idade, String cor) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cor = cor;
+    }
 
+    public String getNome() {
+        return nome;
+    }
 
+    public Integer getIdade() {
+        return idade;
+    }
 
-
+    public String getCor() {
+        return cor;
     }
 }
